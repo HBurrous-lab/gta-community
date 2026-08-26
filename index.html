@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08131f" />
+  <meta name="description" content="Coastal Horizon RolePlay Community Hub" />
+  <title>Coastal Horizon RolePlay | Community Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">CH</span><span><b>Coastal Horizon</b><small>RolePlay Community Hub</small></span></a>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#announcements">News</a><a href="#events">Events</a><a href="#departments">Departments</a><a href="#applications">Applications</a>
+    </nav>
+    <div class="nav-actions"><button id="loginBtn" class="btn ghost">Sign In</button><button id="discordBtn" class="btn primary">Join Discord</button></div>
+    <button id="menuBtn" class="menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> COMMUNITY ONLINE</div>
+        <h1>YOUR HORIZON.<br><em>YOUR STORY.</em></h1>
+        <p>Welcome to Coastal Horizon RolePlay — a community built around immersive Grand Theft Auto roleplay, organized departments, fair leadership, and memorable stories.</p>
+        <div class="hero-actions"><button class="btn primary" data-scroll="#applications">Apply to Join</button><button class="btn secondary" data-scroll="#announcements">Explore Community</button></div>
+        <div class="hero-stats"><div><strong id="memberStat">—</strong><span>Community Members</span></div><div><strong id="eventStat">—</strong><span>Upcoming Events</span></div><div><strong>24/7</strong><span>Community Access</span></div></div>
+      </div>
+      <div class="hero-panel">
+        <div class="sunset"></div><div class="hero-card">
+          <span class="tag">NEXT ERA</span><h3>Grand Theft Auto VI</h3><p>Countdown to November 19, 2026</p>
+          <div class="countdown"><div><b id="days">000</b><small>DAYS</small></div><div><b id="hours">00</b><small>HRS</small></div><div><b id="mins">00</b><small>MIN</small></div><div><b id="secs">00</b><small>SEC</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="announcements" class="section shell"><div class="section-head"><div><span class="kicker">LATEST FROM CH</span><h2>Community News</h2></div><button class="btn ghost small" id="refreshBtn">Refresh</button></div><div id="announcementGrid" class="cards"></div></section>
+
+    <section id="events" class="section tinted"><div class="shell"><div class="section-head"><div><span class="kicker">WHAT'S HAPPENING</span><h2>Upcoming Events</h2></div></div><div id="eventGrid" class="event-grid"></div></div></section>
+
+    <section id="departments" class="section shell"><div class="section-head"><div><span class="kicker">FIND YOUR PLACE</span><h2>Community Departments</h2></div></div><div class="department-grid">
+      <article class="department"><span class="dept-icon">🚓</span><div><h3>Law Enforcement</h3><p>Protect the community, investigate incidents, and create realistic public-safety roleplay.</p></div><span class="arrow">→</span></article>
+      <article class="department"><span class="dept-icon">🚒</span><div><h3>Fire & Rescue</h3><p>Emergency response, medical scenes, rescue operations, and coordinated incidents.</p></div><span class="arrow">→</span></article>
+      <article class="department"><span class="dept-icon">📡</span><div><h3>Communications</h3><p>Keep the community connected with professional dispatch and communications roleplay.</p></div><span class="arrow">→</span></article>
+      <article class="department"><span class="dept-icon">🚗</span><div><h3>Civilian Operations</h3><p>Build businesses, characters, events, storylines, and the world around our responders.</p></div><span class="arrow">→</span></article>
+    </div></section>
+
+    <section id="applications" class="section tinted"><div class="shell application-wrap"><div><span class="kicker">READY TO JOIN?</span><h2>Start your Coastal Horizon journey.</h2><p>Sign in to submit an application, follow your application status, and access community resources.</p></div><div class="apply-box"><button class="btn primary wide" id="applyBtn">Open Application</button><small>Account required for applications.</small></div></div></section>
+
+    <section class="section shell"><div class="feature-grid"><article class="feature"><span>01</span><h3>Immersive Roleplay</h3><p>Structured scenes, believable characters, and a community that values the story over winning.</p></article><article class="feature"><span>02</span><h3>Professional Standards</h3><p>Clear leadership, department expectations, training, and an accountable staff structure.</p></article><article class="feature"><span>03</span><h3>One Community</h3><p>Everything from announcements and events to applications and support in one central hub.</p></article></div></section>
+  </main>
+
+  <footer><div class="shell footer-grid"><div class="brand"><span class="brand-mark">CH</span><span><b>Coastal Horizon</b><small>RolePlay Community Hub</small></span></div><div><h4>Community</h4><a href="#announcements">News</a><a href="#events">Events</a><a href="#departments">Departments</a></div><div><h4>Support</h4><a href="#applications">Applications</a><a href="mailto:support@coastalhorizonrp.com">Contact Staff</a></div></div><div class="shell copyright">© <span id="year"></span> Coastal Horizon RolePlay. Community project.</div></footer>
+
+  <dialog id="authModal"><div class="modal"><button class="close" data-close>×</button><span class="kicker">COMMUNITY ACCOUNT</span><h2 id="authTitle">Sign in</h2><p id="authSubtitle">Access applications and community tools.</p><form id="authForm"><input id="email" type="email" placeholder="Email address" required><input id="password" type="password" placeholder="Password" minlength="6" required><button class="btn primary wide" type="submit" id="authSubmit">Sign In</button></form><button class="text-btn" id="toggleAuth">Need an account? Create one</button></div></dialog>
+  <dialog id="applicationModal"><div class="modal"><button class="close" data-close>×</button><span class="kicker">MEMBERSHIP</span><h2>Community Application</h2><p>Tell us about the roleplay experience you want to bring to Coastal Horizon.</p><form id="applicationForm"><input id="appName" placeholder="Character / display name" required><select id="appArea" required><option value="">Preferred area</option><option>Law Enforcement</option><option>Fire & Rescue</option><option>Communications</option><option>Civilian Operations</option><option>Community / Staff</option></select><textarea id="appWhy" rows="5" placeholder="Why do you want to join?" required></textarea><button class="btn primary wide" type="submit">Submit Application</button></form></div></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
